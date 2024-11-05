@@ -8,7 +8,7 @@
 ## 🚀 Tecnologías Utilizadas
 - **Framework:** Astro
 - **Lenguajes:** HTML, CSS, JavaScript
-- **Estilos:** Tailwind CSS (o el framework de estilos que uses)
+- **Estilos:** Tailwind CSS
 
 ## 📋 Contenido del Portafolio
 - **Sobre mí:** Una introducción a quién soy y qué hago.
