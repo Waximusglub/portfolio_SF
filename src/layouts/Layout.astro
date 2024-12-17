@@ -1,24 +1,46 @@
 ---
-
+import Header from "../components/Header.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/portfolio_SF/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio Sergi Florensa Rojo</title>
+		<meta
+			name="description"
+			content="Portafolio de Sergi Florensa Rojo generado con el framework Astro."
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio</title>
+		<link rel="icon" type="image/png" href="/portfolio_SF/Blond.png" />
+		<meta
+			name="keywords"
+			content="Sergi Florensa, Portafolio, Desarrollo Web, Astro, Frontend, Backend, Diseño Web, Proyectos Web, Programador, HTML, CSS, JavaScript, React, Node.js, Desarrollo Full Stack, Sitios Responsivos, SEO, Freelance, Desarrollo de Software, Aplicaciones Web"
+		/>
+		<meta name="author" content="Sergi Florensa Rojo" />
 	</head>
 	<body>
+		<Header />
 		<slot />
 	</body>
 </html>
 <style is:global>
+	:root {
+		--background-color: #000000;
+		--text-color: #ffffff;
+		--font-family: system-ui, sans-serif;
+	}
+
 	html {
-		font-family: system-ui, sans-serif;
-		background: #292d36;
+		font-family: var(--font-family);
+		background-color: var(--background-color);
+		color: var(--text-color);
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
 	}
 </style>
