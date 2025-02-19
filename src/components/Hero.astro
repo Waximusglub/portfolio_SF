@@ -1,39 +1,49 @@
 ---
-
+import { Icon } from 'astro-icon/components'
 ---
 
-<div id="hero" class="grid grid-cols-5 grid-rows-5 gap-0">
-    <div class="col-span-3 col-start-2 row-start-3">
-        <h1 class="text-9xl text-center">Sergi FR</h1>
+<div id="hero" class="flex">
+    <!-- Profile -->
+    <div class="px-5">
+        <h1 class="text-8xl ">Sergi Florensa</h1>
+        <div class="flex py-5">
+            <a href="https://github.com/Waximusglub" target="_blank" class="p-2"><Icon name="mdi:github" font-size={80} /></a>
+            <a href="https://www.linkedin.com/in/sergi-florensadev/" target="_blank" class="p-2"><Icon name="mdi:linkedin" font-size={80} /></a>
+            <a href="mailto:sflorensadev@gmail.com" class="p-2"><Icon name="mdi:gmail" font-size={80} /></a>
+            <a href="/public/CV_Sergi_Florensa.pdf" download="CV_Sergi_Florensa.pdf" class="p-2"><Icon name="mdi:file-account" font-size={80} /></a>
+        </div>
     </div>
-    <div class="col-start-5 row-start-1 bg-blue-200 hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] transition-all duration-500 ease-out">
-        <a
-            href="/portfolio_SF/CV_Sergi_Florensa.pdf"
-            download="CV_Sergi_Florensa.pdf">
-            CV
-        </a>
+    <!-- DividerColor -->
+    <dir class="bg-red-400 w-2 h-vh"></dir>
+    <!-- Nav -->
+    <div class="text-8xl">
+        <h2>-</h2>
+        <a href=""><h2 class="p-5 hover:bg-red-400 transition-color">Proyectos</h2></a>
+
+        <a href=""><h2 class="p-5 hover:bg-red-400 transition-color">Proyectos</h2></a>
+
+        <a href=""><h2 class="p-5 hover:bg-red-400 transition-color">Proyectos</h2></a>
+
     </div>
-
-    <div class="col-span-2 row-span-2 col-start-1 row-start-1 bg-yellow-300 hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] transition-all duration-500 ease-out">
-    </div>
-
-    <div class="col-span-3 col-start-1 row-start-5 bg-red-200 hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] transition-all duration-500 ease-out"></div>
-
-    <div class="row-span-2 col-start-5 row-start-4 bg-orange-300 hover:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] transition-all duration-500 ease-out"><h2 class="uppercase text-7xl text-white">Proyectos</h2></div>
 </div>
 
 <style>
     #hero {
         opacity: 1;
         transform: translate(calc(-2% + var(--x)), calc(2% + var(--y)))
-            skewX(-48deg) skewY(14deg) scaleX(2) scale(0.4)
+            skewX(-48deg) skewY(14deg) scaleX(2) scale(0.34)
             rotate(var(--rotate)) translateZ(0);
         --rotate: 0deg;
         --x: 0px;
         --y: 0px;
 
-        height: 100vh;
+        height: 95vh;
         width: 100vw;
-
+        
     }
 </style>
+
+
+
+
+

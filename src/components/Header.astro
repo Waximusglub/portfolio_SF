@@ -2,30 +2,23 @@
 
 ---
 
-<header class="text-pigeon font-bold grid grid-cols-3 grid-rows-1 px-10 py-1">
-    <div class="col-span-2 ">
-        <div id="reloj">Cargando hora...</div>
-    </div>
-
-    <div class="col-start-3 flex justify-end">
-        <a
-            class="hover:uppercase hover:text-coral transition-all duration-500 ease-out tracking-normal hover:tracking-wider"
-            href="">
-            about me
-        </a>
-        ,
-        <a
-            class="hover:uppercase hover:text-coral transition-all duration-500 ease-out tracking-normal hover:tracking-wider"
-            href="">
-            projects
-        </a>
-        ,
-        <a
-            class="hover:uppercase hover:text-coral transition-all duration-500 ease-out tracking-normal hover:tracking-wider"
-            href="">
-            resume
-        </a>
-    </div>
+<header class="text-gray-400 px-5 py-2">
+    <p id="reloj" class="text-xs">00 : 00 : 00</p>
 </header>
+<script>
+
+    function mostrarHoraLocal() {
+        const ahora = new Date();
+        const horas = String(ahora.getHours()).padStart(2, "0");
+        const minutos = String(ahora.getMinutes()).padStart(2, "0");
+        const segundos = String(ahora.getSeconds()).padStart(2, "0");
 
 
+        document.getElementById("reloj").textContent =
+        `${horas} : ${minutos} : ${segundos}`;
+    }
+
+    setInterval(mostrarHoraLocal, 1000);
+
+    mostrarHoraLocal();
+</script>
