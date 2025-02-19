@@ -1,24 +1,25 @@
 ---
 
 ---
-
 <header class="text-gray-400 px-5 py-2">
     <p id="reloj" class="text-xs">00 : 00 : 00</p>
-</header>
-<script>
-
+  </header>
+  
+  <script>
     function mostrarHoraLocal() {
-        const ahora = new Date();
-        const horas = String(ahora.getHours()).padStart(2, "0");
-        const minutos = String(ahora.getMinutes()).padStart(2, "0");
-        const segundos = String(ahora.getSeconds()).padStart(2, "0");
-
-
-        document.getElementById("reloj").textContent =
-        `${horas} : ${minutos} : ${segundos}`;
+      const ahora = new Date();
+      const horas = ahora.getHours().toString().padStart(2, "0");
+      const minutos = ahora.getMinutes().toString().padStart(2, "0");
+      const segundos = ahora.getSeconds().toString().padStart(2, "0");
+  
+      const relojElemento = document.getElementById("reloj");
+      if (relojElemento) {
+        relojElemento.textContent = `${horas} : ${minutos} : ${segundos}`;
+      }
     }
 
     setInterval(mostrarHoraLocal, 1000);
 
     mostrarHoraLocal();
-</script>
+  </script>
+  
