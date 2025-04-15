@@ -5,25 +5,27 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 ---
 
 <Main>
-	<main class="flex items-center justify-center min-h-screen">
-		<div class="bg-white">
+	<main class="flex flex-col items-center justify-center min-h-screen">
+		<div class="flex items-center justify-end min-w-[48rem] text-xs text-white text-opacity-10 py-xxs">
+			<Icon name={"mdi:source-branch"}></Icon><code>{commitHash}</code>
+		</div>
+		<div >
+			
 			<!-- Sec-Top -->
-			<section class="flex justify-between min-w-[48rem] min-h-[10rem]">
+			<section class="flex justify-between min-w-[48rem] min-h-[12rem] bg-white">
 				<!-- Nav -->
 				<nav>
-					<div class="space-x-4 p-xs font-thin">
+					<div class="space-x-3 p-xs font-thin">
 						<a
 							href="#"
 							class="hover:font-bold hover:text-bloody transition-all duration-600"
 							>About me</a
 						>
-						<span>·</span>
 						<a
 							href="#"
 							class="hover:font-bold hover:text-bloody transition-all duration-600"
 							>Work</a
 						>
-						<span>·</span>
 						<a
 							href="#"
 							class="hover:font-bold hover:text-bloody transition-all duration-600"
@@ -34,13 +36,13 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 
 				<div class="flex flex-col justify-between">
 					<div>
-						<h1 class="text-5xl font-bold">Sergi Florensa</h1>
-						<h2 class="text-bloody py-sm font-light">
-							<span class="font-bold">Programador</span> Junior
+						<h1 class="text-6xl font-black">Sergi Florensa</h1>
+						<h2 class="text-bloody py-sm font-thin text-2xl" style="font-family: 'Times New Roman', Times, serif;">
+							<span class="font-bold font-sans" >Programador</span> Junior
 						</h2>
 					</div>
 
-					<div class="space-x-1">
+					<div class="space-x-1 pr-xs">
 						<a
 							href="https://github.com/Waximusglub"
 							target="_blank"
@@ -63,14 +65,16 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 					</div>
 				</div>
 			</section>
+
+			<!-- Sec-Bot -->
 			<section
-				class="flex justify-between items-start min-w-[48rem] min-h-[10rem]"
+				class="flex justify-between items-start min-w-[48rem] min-h-[12rem] mt-xxs"
 			>
 				<div class="p-xs">
-					<p id="reloj" class="text-xs">00 : 00 : 00</p>
-					<code>{commitHash}</code>
+					<!-- <p id="reloj" class="text-xs">00 : 00 : 00</p> -->
+					
 				</div>
-
+				
 			</section>
 		</div>
 	</main>
