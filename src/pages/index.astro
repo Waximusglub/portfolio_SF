@@ -1,6 +1,5 @@
 ---
 import Main from "../layouts/Main.astro";
-const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 import { Icon } from "astro-icon/components";
 ---
 
@@ -68,7 +67,6 @@ import { Icon } from "astro-icon/components";
 			>
 				<div class="p-xs">
 					<p id="reloj" class="text-xs">00 : 00 : 00</p>
-					<code>{commitHash}</code>
 				</div>
 
 			</section>
