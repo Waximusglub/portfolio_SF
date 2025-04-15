@@ -3,17 +3,22 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			spacing:{
+				'xxs': '0.25rem', // 4px
+				'xs': '0.5rem',   // 8px
+				'sm': '0.75rem',  // 12px
+				'md': '1rem',     // 16px
+				'lg': '1.5rem',   // 24px
+				'xl': '2rem',     // 32px
+				'2xl': '2.5rem',  // 40px
+			},
 			colors: {
-				coral: {
-					DEFAULT: '#FF6F61', // Rojo Coral
-					light: '#FFA491', // Tonos más claros si los necesitas
-					dark: '#CC584D',  // Tonos más oscuros
-				},
-				cream: '#FFF8F1',     // Blanco Crema
-				pigeon: '#4F4F4F',    // Gris Paloma
-				sage: '#A7C957',      // Verde Salvia
-				steelblue: '#6C7A89', // Azul Grisáceo
-				gold: '#FFD66B',      // Amarillo Dorado
+				peach: '#FBEEDA',
+				yellow: '#F7E0BA',
+				tulip: '#40002B',
+				bloody: '#BA0105',
+				bordeaux: '#7B002C',
+				tiger: '#EA5814',
 			},
 		},
 	},

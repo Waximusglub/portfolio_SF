@@ -1,12 +1,95 @@
 ---
-import Hero from "../components/Hero.astro";
 import Main from "../layouts/Main.astro";
-
+const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
+import { Icon } from "astro-icon/components";
 ---
 
 <Main>
-	<main>
-		<Hero />
+	<main class="flex items-center justify-center min-h-screen">
+		<div class="bg-white">
+			<!-- Sec-Top -->
+			<section class="flex justify-between min-w-[48rem] min-h-[10rem]">
+				<!-- Nav -->
+				<nav>
+					<div class="space-x-4 p-xs font-thin">
+						<a
+							href="#"
+							class="hover:font-bold hover:text-bloody transition-all duration-600"
+							>About me</a
+						>
+						<span>·</span>
+						<a
+							href="#"
+							class="hover:font-bold hover:text-bloody transition-all duration-600"
+							>Work</a
+						>
+						<span>·</span>
+						<a
+							href="#"
+							class="hover:font-bold hover:text-bloody transition-all duration-600"
+							>Projects</a
+						>
+					</div>
+				</nav>
 
+				<div class="flex flex-col justify-between">
+					<div>
+						<h1 class="text-5xl font-bold">Sergi Florensa</h1>
+						<h2 class="text-bloody py-sm font-light">
+							<span class="font-bold">Programador</span> Junior
+						</h2>
+					</div>
+
+					<div class="space-x-1">
+						<a
+							href="https://github.com/Waximusglub"
+							target="_blank"
+							class="text-xs"
+							>github.com/Waximusglub
+						</a>
+						<span>·</span>
+						<a
+							href="https://www.linkedin.com/in/sergi-florensadev/"
+							target="_blank"
+							class="text-xs"
+							>/in/sergi-florensadev/
+						</a>
+						<span>·</span>
+						<a 
+							href="mailto:sflorensadev@gmail.com" 
+							class="text-xs"
+							>sflorensadev@gmail.com
+						</a>
+					</div>
+				</div>
+			</section>
+			<section
+				class="flex justify-between items-start min-w-[48rem] min-h-[10rem]"
+			>
+				<div class="p-xs">
+					<p id="reloj" class="text-xs">00 : 00 : 00</p>
+					<code>{commitHash}</code>
+				</div>
+
+			</section>
+		</div>
 	</main>
 </Main>
+
+<script>
+	function mostrarHoraLocal() {
+		const ahora = new Date();
+		const horas = ahora.getHours().toString().padStart(2, "0");
+		const minutos = ahora.getMinutes().toString().padStart(2, "0");
+		const segundos = ahora.getSeconds().toString().padStart(2, "0");
+
+		const relojElemento = document.getElementById("reloj");
+		if (relojElemento) {
+			relojElemento.textContent = `${horas} : ${minutos} : ${segundos}`;
+		}
+	}
+
+	setInterval(mostrarHoraLocal, 1000);
+
+	mostrarHoraLocal();
+</script>

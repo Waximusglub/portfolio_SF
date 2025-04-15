@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
+      - name: Export Git commit hash to Astro env
+        run: echo "PUBLIC_COMMIT_HASH=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
       - name: Install, build, and upload your site
         uses: withastro/action@v3
         # with:

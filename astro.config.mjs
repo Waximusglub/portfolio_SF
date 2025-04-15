@@ -7,6 +7,6 @@ import icon from 'astro-icon';
 
 export default defineConfig({
   site: 'https://Waximusglub.github.io',
-  base: 'portfolio_SF',
+  base: '/portfolio_SF/',
   integrations: [tailwind(), icon()],
 });
