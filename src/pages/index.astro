@@ -1,6 +1,7 @@
 ---
 import Main from "../layouts/Main.astro";
 import { Icon } from "astro-icon/components";
+import '../styles/global.css';
 const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 ---
 
@@ -36,9 +37,9 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 
 				<div class="flex flex-col justify-between">
 					<div>
-						<h1 class="text-6xl font-black">Sergi Florensa</h1>
-						<h2 class="text-bloody py-sm font-thin text-2xl" style="font-family: 'Times New Roman', Times, serif;">
-							<span class="font-bold font-sans" >Programador</span> Junior
+						<h1 class="text-[4.2rem] ">Sergi Florensa</h1>
+						<h2 class="text-bloody text-[1.5rem] font-bold">
+							Programador <span class="text-[1rem] font-thin"style="font-family: 'Times New Roman', Times, serif;" >Junior</span> 
 						</h2>
 					</div>
 
@@ -68,12 +69,12 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 
 			<!-- Sec-Bot -->
 			<section
-				class="flex justify-between items-start min-w-[48rem] min-h-[12rem] mt-xxs"
+				class="flex justify-between items-start min-w-[48rem] min-h-[12rem] mt-xxs bg-white"
 			>
-				<div class="p-xs">
-					<!-- <p id="reloj" class="text-xs">00 : 00 : 00</p> -->
-					
-				</div>
+			<div class="flex items-center">
+				<div class="p-xs m-xs bg-bordeaux"></div>
+				<p id="reloj" class="text-xs">00 : 00 : 00</p>
+			</div>
 				
 			</section>
 		</div>

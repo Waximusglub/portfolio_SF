@@ -20,6 +20,11 @@ export default {
 				bordeaux: '#7B002C',
 				tiger: '#EA5814',
 			},
+			fontFamily: {
+				outwardBlock: ['Outward Block', 'sans-serif'],
+				outwardBorders: ['Outward Borders', 'sans-serif'],
+				outwardRound: ['Outward Round', 'sans-serif'],
+			},
 		},
 	},
 	plugins: [],
