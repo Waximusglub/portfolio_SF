@@ -1,22 +1,25 @@
 ---
 import Main from "../layouts/Main.astro";
 import { Icon } from "astro-icon/components";
-import '../styles/global.css';
+import "../styles/global.css";
 const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 ---
 
 <Main>
 	<main class="flex flex-col items-center justify-center min-h-screen">
-		<div class="flex items-center justify-end min-w-[48rem] text-xs text-white text-opacity-10 py-xxs">
-			<Icon name={"mdi:source-branch"}></Icon><code>{commitHash}</code>
+		<div
+			class="flex items-center justify-end min-w-[48rem] text-xs text-white text-opacity-10 py-xxs"
+		>
+			<Icon name={"mdi:source-branch"} /><code>{commitHash}</code>
 		</div>
-		<div >
-			
+		<div>
 			<!-- Sec-Top -->
-			<section class="flex justify-between min-w-[48rem] min-h-[12rem] bg-white">
+			<section
+				class="flex justify-between min-w-[48rem] min-h-[12rem] bg-white"
+			>
 				<!-- Nav -->
 				<nav>
-					<div class="space-x-3 p-xs font-thin">
+					<div class="space-x-3 p-xs font-thin leading-none">
 						<a
 							href="#"
 							class="hover:font-bold hover:text-bloody transition-all duration-600"
@@ -37,9 +40,13 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 
 				<div class="flex flex-col justify-between">
 					<div>
-						<h1 class="text-[4.2rem] ">Sergi Florensa</h1>
+						<h1 class="text-[4.2rem]">Sergi Florensa</h1>
 						<h2 class="text-bloody text-[1.5rem] font-bold">
-							Programador <span class="text-[1rem] font-thin"style="font-family: 'Times New Roman', Times, serif;" >Junior</span> 
+							Programador <span
+								class="text-[1rem] font-thin"
+								style="font-family: 'Times New Roman', Times, serif;"
+								>Junior</span
+							>
 						</h2>
 					</div>
 
@@ -47,9 +54,16 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 						<a
 							href="https://github.com/Waximusglub"
 							target="_blank"
-							class="text-xs"
+							id="miLink"
+							class="text-xs cursor-pointer"
 							>github.com/Waximusglub
 						</a>
+							<img
+							id="hoverImage"
+							src="img/profile.png"
+							alt="Imagen flotante"
+							class="hidden fixed w-32 rounded-xl shadow-lg pointer-events-none transition-opacity duration-200"
+							/>
 						<span>·</span>
 						<a
 							href="https://www.linkedin.com/in/sergi-florensadev/"
@@ -58,9 +72,7 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 							>/in/sergi-florensadev/
 						</a>
 						<span>·</span>
-						<a 
-							href="mailto:sflorensadev@gmail.com" 
-							class="text-xs"
+						<a href="mailto:sflorensadev@gmail.com" class="text-xs"
 							>sflorensadev@gmail.com
 						</a>
 					</div>
@@ -71,11 +83,13 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 			<section
 				class="flex justify-between items-start min-w-[48rem] min-h-[12rem] mt-xxs bg-white"
 			>
-			<div class="flex items-center">
-				<div class="p-xs m-xs bg-bordeaux"></div>
-				<p id="reloj" class="text-xs">00 : 00 : 00</p>
-			</div>
-				
+				<div class="flex items-center w-[30%]">
+					<div class="p-xs m-xs bg-bordeaux"></div>
+					<p id="reloj" class="text-xs">00 : 00 : 00</p>
+				</div>
+				<div class="flex items-center w-[70%] h-[12rem] bg-bordeaux">
+
+				</div>
 			</section>
 		</div>
 	</main>
@@ -97,4 +111,21 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 	setInterval(mostrarHoraLocal, 1000);
 
 	mostrarHoraLocal();
+
+	const link = document.getElementById('miLink');
+    const hoverImage = document.getElementById('hoverImage');
+
+    link.addEventListener('mouseenter', () => {
+      hoverImage.classList.remove('hidden');
+      hoverImage.classList.add('opacity-100');
+    });
+
+    link.addEventListener('mouseleave', () => {
+      hoverImage.classList.add('hidden');
+    });
+
+    link.addEventListener('mousemove', (e) => {
+      hoverImage.style.left = (e.clientX + 12) + 'px';
+      hoverImage.style.top = (e.clientY + 12) + 'px';
+    });
 </script>
