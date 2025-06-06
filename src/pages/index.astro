@@ -1,96 +1,179 @@
 ---
-import Main from "../layouts/Main.astro";
 import { Icon } from "astro-icon/components";
 import "../styles/global.css";
+
+import Main from "../layouts/Main.astro";
+import Copytxt from "../components/Copytxt";
+
 const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 ---
 
 <Main>
-	<main class="flex flex-col items-center justify-center min-h-screen">
-		<div
-			class="flex items-center justify-end min-w-[48rem] text-xs text-white text-opacity-10 py-xxs"
-		>
-			<Icon name={"mdi:source-branch"} /><code>{commitHash}</code>
-		</div>
-		<div>
-			<!-- Sec-Top -->
-			<section
-				class="flex justify-between min-w-[48rem] min-h-[12rem] bg-white"
-			>
-				<!-- Nav -->
-				<nav>
-					<div class="space-x-3 p-xs font-thin leading-none">
-						<a
-							href="#"
-							class="hover:font-bold hover:text-bloody transition-all duration-600"
-							>About me</a
+	<main class="flex flex-col justify-center items-center">
+		<div class="w-[55%] md:w-[40%] lg:w-[25%] my-8">
+			<!-- Profile -->
+			<div class="grid grid-cols-2 gap-4">
+				<!-- Avatar -->
+				<div class="row-span-2 overflow-hidden rounded-lg relative">
+					<img class="object-cover w-full h-full" src="img/profile.png" alt="Profile" />
+					<div class="absolute bottom-0 right-8 text-base text-[#e2e2e2]">
+						<code>{commitHash}</code><Icon name={"mdi:source-branch"} />
+					</div>
+				</div>
+				<!-- Info -->
+				<div class="flex flex-col justify-center">
+					<h1 class="text-xl">Sergi Florensa Rojo</h1>
+					<div
+						class="flex justify-between font-thin text-base py-xxs"
+					>
+						<h2>Programador Junior</h2>
+						<Copytxt
+							textcopyed="https://waximusglub.github.io/portfolio_SF/"
+							client:load
+							stylesbtn="text-base"
 						>
-						<a
-							href="#"
-							class="hover:font-bold hover:text-bloody transition-all duration-600"
-							>Work</a
+							<Icon name={"mdi:link"} />
+						</Copytxt>
+					</div>
+				</div>
+
+				<div class="grid grid-cols-4">
+					<div class="text-[#D14836]">
+						<Copytxt
+							textcopyed="sflorensadev@gmail.com"
+							client:load
 						>
-						<a
-							href="#"
-							class="hover:font-bold hover:text-bloody transition-all duration-600"
-							>Projects</a
+							<Icon name="mdi:gmail" class="w-8 h-8" />
+						</Copytxt>
+					</div>
+					<div class="text-black">
+						<a href="https://github.com/Waximusglub" target="_blank"
+							><Icon name="mdi:github" class="w-8 h-8" /></a
 						>
 					</div>
-				</nav>
-
-				<div class="flex flex-col justify-between">
-					<div>
-						<h1 class="text-[4.2rem]">Sergi Florensa</h1>
-						<h2 class="text-bloody text-[1.5rem] font-bold">
-							Programador <span
-								class="text-[1rem] font-thin"
-								style="font-family: 'Times New Roman', Times, serif;"
-								>Junior</span
-							>
-						</h2>
-					</div>
-
-					<div class="space-x-1 pr-xs">
-						<a
-							href="https://github.com/Waximusglub"
-							target="_blank"
-							id="miLink"
-							class="text-xs cursor-pointer"
-							>github.com/Waximusglub
-						</a>
-							<img
-							id="hoverImage"
-							src="img/profile.png"
-							alt="Imagen flotante"
-							class="hidden fixed w-32 rounded-xl shadow-lg pointer-events-none transition-opacity duration-200"
-							/>
-						<span>·</span>
+					<div class="text-[#0A66C2]">
 						<a
 							href="https://www.linkedin.com/in/sergi-florensadev/"
 							target="_blank"
-							class="text-xs"
-							>/in/sergi-florensadev/
-						</a>
-						<span>·</span>
-						<a href="mailto:sflorensadev@gmail.com" class="text-xs"
-							>sflorensadev@gmail.com
-						</a>
+							><Icon name="mdi:linkedin" class="w-8 h-8" /></a
+						>
+					</div>
+
+					<div class="text-[#f03838]">
+						<a
+							href="doc/CV_Sergi-Florensa.pdf"
+							class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg text-sm px-1.5 py-1"
+							download>CV</a
+						>
 					</div>
 				</div>
-			</section>
+			</div>
 
-			<!-- Sec-Bot -->
-			<section
-				class="flex justify-between items-start min-w-[48rem] min-h-[12rem] mt-xxs bg-white"
-			>
-				<div class="flex items-center w-[30%]">
-					<div class="p-xs m-xs bg-bordeaux"></div>
-					<p id="reloj" class="text-xs">00 : 00 : 00</p>
-				</div>
-				<div class="flex items-center w-[70%] h-[12rem] bg-bordeaux">
+			<hr class="w-[100%] h-[1px] my-4" />
 
+			<!-- About Me -->
+			<div class="text-sm">
+				<p>
+					Desarrollador de aplicaciones con formación en SMX y DAM.
+					Experiencia en React Native, React y Astro. Comprometido con
+					la mejora continua y la entrega de soluciones funcionales,
+					eficientes y escalables.
+				</p>
+			</div>
+
+			<hr class="w-[100%] h-[1px] my-4" />
+
+			<!-- Experinece -->
+			<div>
+				<h2 class="text-2xl font-semibold">Experinecia Profesional</h2>
+
+				<div class="grid grid-cols-5 grid-rows-2 gap-2 my-4">
+					<div class="col-[1/4] flex flex-col justify-center">
+						<h3 class="text-xl">Quimega</h3>
+						<p class="text-[0.75rem]">
+							Administrador de Contenidos Web
+						</p>
+					</div>
+					<div class="col-span-2"></div>
+					<div class="col-[1/6] text-xs">
+						<ul>
+							<li>
+								-Gestioné y optimicé contenidos en WordPress con
+								enfoque SEO, participando en el diseño,
+								implementación y pruebas para mejorar la
+								experiencia del usuario.
+							</li>
+						</ul>
+					</div>
 				</div>
-			</section>
+
+				<div class="grid grid-cols-5 grid-rows-2 gap-2 my-4">
+					<div class="col-[1/4] flex flex-col justify-center">
+						<h3 class="text-xl">Dispromedia</h3>
+						<p class="text-[0.75rem]">
+							Desarrollador de Aplicaciones Móviles
+						</p>
+					</div>
+					<div class="col-span-2"></div>
+					<div class="col-[1/6] text-xs">
+						<ul>
+							<li>
+								-Desarrollé una aplicación móvil multiplataforma
+								en React Native y Realm para un cliente real,
+								participando en todo el ciclo de vida del
+								proyecto junto al equipo.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<hr class="w-[100%] h-[1px] my-4" />
+
+			<!-- Projects -->
+			<div>
+				<h2 class="text-2xl font-semibold">Proyectos</h2>
+
+				<div class="grid grid-cols-5 grid-rows-2 gap-2 my-4">
+					<div class="col-[1/4] flex flex-col justify-center">
+						<h3 class="text-xl">Quimega</h3>
+						<p class="text-[0.75rem]">
+							Administrador de Contenidos Web
+						</p>
+					</div>
+					<div class="col-span-2"></div>
+					<div class="col-[1/6] text-xs">
+						<ul>
+							<li>
+								-Gestioné y optimicé contenidos en WordPress con
+								enfoque SEO, participando en el diseño,
+								implementación y pruebas para mejorar la
+								experiencia del usuario.
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="grid grid-cols-5 grid-rows-2 gap-2 my-4">
+					<div class="col-[1/4] flex flex-col justify-center">
+						<h3 class="text-xl">Dispromedia</h3>
+						<p class="text-[0.75rem]">
+							Desarrollador de Aplicaciones Móviles
+						</p>
+					</div>
+					<div class="col-span-2"></div>
+					<div class="col-[1/6] text-xs">
+						<ul>
+							<li>
+								-Desarrollé una aplicación móvil multiplataforma
+								en React Native y Realm para un cliente real,
+								participando en todo el ciclo de vida del
+								proyecto junto al equipo.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
 </Main>
@@ -111,21 +194,4 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 	setInterval(mostrarHoraLocal, 1000);
 
 	mostrarHoraLocal();
-
-	const link = document.getElementById('miLink');
-    const hoverImage = document.getElementById('hoverImage');
-
-    link.addEventListener('mouseenter', () => {
-      hoverImage.classList.remove('hidden');
-      hoverImage.classList.add('opacity-100');
-    });
-
-    link.addEventListener('mouseleave', () => {
-      hoverImage.classList.add('hidden');
-    });
-
-    link.addEventListener('mousemove', (e) => {
-      hoverImage.style.left = (e.clientX + 12) + 'px';
-      hoverImage.style.top = (e.clientY + 12) + 'px';
-    });
 </script>

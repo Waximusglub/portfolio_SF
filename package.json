@@ -11,10 +11,11 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/markdown-remark": "^6.3.1",
+    "@astrojs/markdown-remark": "^6.3.2",
+    "@astrojs/react": "^4.3.0",
     "@astrojs/tailwind": "^6.0.2",
     "@iconify-json/mdi": "^1.2.1",
-    "astro": "^5.6.1",
+    "astro": "^5.9.0",
     "astro-icon": "^1.1.2",
     "cookie": "^1.0.2",
     "esbuild": "^0.25.0",

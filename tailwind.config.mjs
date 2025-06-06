@@ -12,19 +12,6 @@ export default {
 				'xl': '2rem',     // 32px
 				'2xl': '2.5rem',  // 40px
 			},
-			colors: {
-				peach: '#FBEEDA',
-				yellow: '#F7E0BA',
-				tulip: '#40002B',
-				bloody: '#BA0105',
-				bordeaux: '#7B002C',
-				tiger: '#EA5814',
-			},
-			fontFamily: {
-				outwardBlock: ['Outward Block', 'sans-serif'],
-				outwardBorders: ['Outward Borders', 'sans-serif'],
-				outwardRound: ['Outward Round', 'sans-serif'],
-			},
 		},
 	},
 	plugins: [],
