@@ -9,42 +9,54 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 ---
 
 <Main>
+	<div class="flex justify-between p-2 text-xs text-gray-500">
+		<div id="reloj"></div>
+		<div class="flex items-center space-x-1">
+			<code>{commitHash}</code><Icon name={"mdi:source-branch"} />
+		</div>
+	</div>
 	<main class="flex flex-col justify-center items-center">
-		<div class="w-[55%] md:w-[40%] lg:w-[25%] my-8">
+		<div class="w-[55%] md:w-[40%] lg:w-[32%] my-8">
 			<!-- Profile -->
 			<div class="grid grid-cols-2 gap-4">
 				<!-- Avatar -->
-				<div class="row-span-2 overflow-hidden rounded-lg relative">
-					<img class="object-cover w-full h-full" src="img/profile.png" alt="Profile" />
-					<div class="absolute bottom-0 right-8 text-base text-[#e2e2e2]">
-						<code>{commitHash}</code><Icon name={"mdi:source-branch"} />
-					</div>
+				<div class="row-span-2 overflow-hidden rounded-md">
+					<img
+						class="object-cover w-full h-full"
+						src="img/profile.png"
+						alt="Profile"
+					/>
 				</div>
 				<!-- Info -->
 				<div class="flex flex-col justify-center">
-					<h1 class="text-xl">Sergi Florensa Rojo</h1>
-					<div
-						class="flex justify-between font-thin text-base py-xxs"
-					>
-						<h2>Programador Junior</h2>
-						<Copytxt
+					<h1 class="text-sm text-gray-500">
+						Hola, Soy Sergi Florensa
+					</h1>
+					<div class="flex justify-between text-xl py-xxs">
+						<h2 class="text-[1.5rem] te">
+							Programador <span class="font-bold text-red-500"
+								>Front End</span
+							>
+							Junior
+						</h2>
+						<!-- <Copytxt
 							textcopyed="https://waximusglub.github.io/portfolio_SF/"
 							client:load
 							stylesbtn="text-base"
 						>
 							<Icon name={"mdi:link"} />
-						</Copytxt>
+						</Copytxt> -->
 					</div>
 				</div>
 
-				<div class="grid grid-cols-4">
+				<div class="grid grid-cols-4 place-items-center">
 					<div class="text-[#D14836]">
-						<Copytxt
-							textcopyed="sflorensadev@gmail.com"
-							client:load
+						<a
+							href="https://github.com/Waximusglub"
+							target="_blank"
 						>
 							<Icon name="mdi:gmail" class="w-8 h-8" />
-						</Copytxt>
+						</a>
 					</div>
 					<div class="text-black">
 						<a href="https://github.com/Waximusglub" target="_blank"
@@ -59,27 +71,37 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 						>
 					</div>
 
-					<div class="text-[#f03838]">
+					<div class="text-[#f03838] px-1.5 py-1">
 						<a
 							href="doc/CV_Sergi-Florensa.pdf"
-							class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-lg text-sm px-1.5 py-1"
+							class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-md text-sm px-1.5 py-1"
 							download>CV</a
 						>
 					</div>
+					<p class="text-xs text-gray-500 col-span-4">
+						Apasionado por el diseño y desarrollo de páginas web,
+						con experiencia en <span
+							class="text-red-500 font-bold text-sm">React</span
+						> , <span class="text-red-500 font-bold text-sm"
+							>Astro</span
+						> y <span class="text-red-500 font-bold text-sm"
+							>Tailwind</span
+						>. Siempre en constante aprendizaje.
+					</p>
 				</div>
 			</div>
 
-			<hr class="w-[100%] h-[1px] my-4" />
+			<!-- <hr class="w-[100%] h-[1px] my-4" /> -->
 
 			<!-- About Me -->
-			<div class="text-sm">
+			<!-- <div class="text-sm">
 				<p>
 					Desarrollador de aplicaciones con formación en SMX y DAM.
 					Experiencia en React Native, React y Astro. Comprometido con
 					la mejora continua y la entrega de soluciones funcionales,
 					eficientes y escalables.
 				</p>
-			</div>
+			</div> -->
 
 			<hr class="w-[100%] h-[1px] my-4" />
 
@@ -94,7 +116,10 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 							Administrador de Contenidos Web
 						</p>
 					</div>
-					<div class="col-span-2"></div>
+					<div class="col-span-2 grid grid-cols-3 place-items-center">
+						<Icon name="mdi:wordpress" class="w-8 h-8" />
+						<Icon name="mdi:search-web" class="w-8 h-8" />
+					</div>
 					<div class="col-[1/6] text-xs">
 						<ul>
 							<li>
@@ -114,7 +139,9 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 							Desarrollador de Aplicaciones Móviles
 						</p>
 					</div>
-					<div class="col-span-2"></div>
+					<div class="col-span-2 grid grid-cols-3 place-items-center">
+						<Icon name="mdi:react" class="w-8 h-8" />
+					</div>
 					<div class="col-[1/6] text-xs">
 						<ul>
 							<li>
@@ -133,44 +160,57 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 			<!-- Projects -->
 			<div>
 				<h2 class="text-2xl font-semibold">Proyectos</h2>
+				<div class="grid grid-cols-6 grid-rows-6 gap-4 my-4">
+					<!-- Proyecto grande (2x4) -->
+					<div
+						class="col-span-4 row-span-3 rounded-2xl p-4 shadow-md hover:shadow-lg grid grid-cols-5 grid-rows-4"
+					>
+						<div class="flex col-span-4">
+							<h4>P1</h4>
+						</div>
 
-				<div class="grid grid-cols-5 grid-rows-2 gap-2 my-4">
-					<div class="col-[1/4] flex flex-col justify-center">
-						<h3 class="text-xl">Quimega</h3>
-						<p class="text-[0.75rem]">
-							Administrador de Contenidos Web
-						</p>
+						<div class="place-self-center">
+							<Icon name="mdi:link" class="w-4 h-4" />
+						</div>
 					</div>
-					<div class="col-span-2"></div>
-					<div class="col-[1/6] text-xs">
-						<ul>
-							<li>
-								-Gestioné y optimicé contenidos en WordPress con
-								enfoque SEO, participando en el diseño,
-								implementación y pruebas para mejorar la
-								experiencia del usuario.
-							</li>
-						</ul>
-					</div>
-				</div>
 
-				<div class="grid grid-cols-5 grid-rows-2 gap-2 my-4">
-					<div class="col-[1/4] flex flex-col justify-center">
-						<h3 class="text-xl">Dispromedia</h3>
-						<p class="text-[0.75rem]">
-							Desarrollador de Aplicaciones Móviles
-						</p>
+					<!-- Proyecto alto (2x3) -->
+					<div
+						class="col-span-2 row-span-3 rounded-2xl p-4 shadow-md hover:shadow-lg grid grid-cols-5 grid-rows-4"
+					>
+						<div class="flex col-span-4">
+							<h4>P2</h4>
+						</div>
+
+						<div class="place-self-center">
+							<Icon name="mdi:link" class="w-4 h-4" />
+						</div>
 					</div>
-					<div class="col-span-2"></div>
-					<div class="col-[1/6] text-xs">
-						<ul>
-							<li>
-								-Desarrollé una aplicación móvil multiplataforma
-								en React Native y Realm para un cliente real,
-								participando en todo el ciclo de vida del
-								proyecto junto al equipo.
-							</li>
-						</ul>
+
+					<!-- Proyecto pequeño (2x2) -->
+					<div
+						class="col-span-2 row-span-2 rounded-2xl p-4 shadow-md hover:shadow-lg grid grid-cols-5 grid-rows-4"
+					>
+						<div class="flex col-span-4">
+							<h4>P3</h4>
+						</div>
+
+						<div class="place-self-center">
+							<Icon name="mdi:link" class="w-4 h-4" />
+						</div>
+					</div>
+
+					<!-- Proyecto rectangular (4x2) -->
+					<div
+						class="col-span-4 row-span-2 rounded-2xl p-4 shadow-md hover:shadow-lg grid grid-cols-5 grid-rows-4"
+					>
+						<div class="flex col-span-4">
+							<h4>P4</h4>
+						</div>
+
+						<div class="place-self-center">
+							<Icon name="mdi:link" class="w-4 h-4" />
+						</div>
 					</div>
 				</div>
 			</div>
