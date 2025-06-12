@@ -20,7 +20,7 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 			<!-- Profile -->
 			<div class="grid grid-cols-2 gap-4">
 				<!-- Avatar -->
-				<div class="row-span-2 overflow-hidden rounded-md">
+				<div class="row-span-2 overflow-hidden">
 					<img
 						class="object-cover w-full h-full"
 						src="img/profile.png"
@@ -28,70 +28,26 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 					/>
 				</div>
 				<!-- Info -->
-				<div class="flex flex-col justify-center">
+				<div class="flex flex-col">
 					<h1 class="text-sm text-gray-500">
 						Hola, Soy Sergi Florensa
 					</h1>
-					<div class="flex justify-between text-xl py-xxs">
-						<h2 class="text-[1.5rem] te">
+					<div class="flex justify-between text-xl">
+						<h2 class="text-[1.7rem] ">
 							Programador <span class="font-bold text-red-500"
 								>Front End</span
 							>
 							Junior
 						</h2>
-						<!-- <Copytxt
-							textcopyed="https://waximusglub.github.io/portfolio_SF/"
-							client:load
-							stylesbtn="text-base"
-						>
-							<Icon name={"mdi:link"} />
-						</Copytxt> -->
 					</div>
 				</div>
 
-				<div class="grid grid-cols-4 place-items-center">
-					<div class="text-[#D14836]">
-						<a
-							href="https://github.com/Waximusglub"
-							target="_blank"
-						>
-							<Icon name="mdi:gmail" class="w-8 h-8" />
-						</a>
-					</div>
-					<div class="text-black">
-						<a href="https://github.com/Waximusglub" target="_blank"
-							><Icon name="mdi:github" class="w-8 h-8" /></a
-						>
-					</div>
-					<div class="text-[#0A66C2]">
-						<a
-							href="https://www.linkedin.com/in/sergi-florensadev/"
-							target="_blank"
-							><Icon name="mdi:linkedin" class="w-8 h-8" /></a
-						>
-					</div>
-
-					<div class="text-[#f03838] px-1.5 py-1">
-						<a
-							href="doc/CV_Sergi-Florensa.pdf"
-							class="text-white bg-red-700 hover:bg-red-800 font-medium rounded-md text-sm px-1.5 py-1"
-							download>CV</a
-						>
-					</div>
-					<p class="text-xs text-gray-500 col-span-4">
-						Apasionado por el diseño y desarrollo de páginas web,
-						con experiencia en <span
-							class="text-red-500 font-bold text-sm">React</span
-						> , <span class="text-red-500 font-bold text-sm"
-							>Astro</span
-						> y <span class="text-red-500 font-bold text-sm"
-							>Tailwind</span
-						>. Siempre en constante aprendizaje.
+				<div class="">
+					<p class="text-xs text-gray-500 col-span-4 ">
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae delectus magni a fugiat ratione enim voluptate eligendi sequi debitis facere?
 					</p>
 				</div>
 			</div>
-
-			<!-- <hr class="w-[100%] h-[1px] my-4" /> -->
 
 			<!-- About Me -->
 			<!-- <div class="text-sm">
@@ -116,9 +72,20 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 							Administrador de Contenidos Web
 						</p>
 					</div>
-					<div class="col-span-2 grid grid-cols-3 place-items-center">
-						<Icon name="mdi:wordpress" class="w-8 h-8" />
-						<Icon name="mdi:search-web" class="w-8 h-8" />
+					<div class="col-span-2">
+						<span
+							class="inline-flex items-center gap-1 bg-[#21759b]/10 text-[#21759b] px-2 py-1 rounded-full text-sm font-medium"
+						>
+							<Icon name="mdi:wordpress" class="w-4 h-4" />
+							WordPress
+						</span>
+
+						<span
+							class="inline-flex items-center gap-1 bg-[#00c853]/10 text-[#00c853] px-2 py-1 rounded-full text-sm font-medium"
+						>
+							<Icon name="mdi:magnify" class="w-4 h-4" />
+							SEO
+						</span>
 					</div>
 					<div class="col-[1/6] text-xs">
 						<ul>
@@ -139,8 +106,13 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 							Desarrollador de Aplicaciones Móviles
 						</p>
 					</div>
-					<div class="col-span-2 grid grid-cols-3 place-items-center">
-						<Icon name="mdi:react" class="w-8 h-8" />
+					<div class="col-span-2">
+						<span
+							class="inline-flex items-center gap-1 bg-[#61dafb]/10 text-[#61dafb] px-2 py-1 rounded-full text-sm font-medium"
+						>
+							<Icon name="mdi:react" class="w-4 h-4" />
+							React Native
+						</span>
 					</div>
 					<div class="col-[1/6] text-xs">
 						<ul>
@@ -166,11 +138,17 @@ const commitHash = import.meta.env.PUBLIC_COMMIT_HASH;
 						class="col-span-4 row-span-3 rounded-2xl p-4 shadow-md hover:shadow-lg grid grid-cols-5 grid-rows-4"
 					>
 						<div class="flex col-span-4">
-							<h4>P1</h4>
+							<h4>Bot de Discord</h4>
 						</div>
 
 						<div class="place-self-center">
-							<Icon name="mdi:link" class="w-4 h-4" />
+							<a
+								href="https://github.com/Waximusglub/Develop-Bot"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Icon name="mdi:link" class="w-4 h-4" />
+							</a>
 						</div>
 					</div>
 
